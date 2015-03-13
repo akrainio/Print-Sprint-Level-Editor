@@ -136,7 +136,15 @@ function LoadContent() {
 	laserleft.y = 32 * 10;
 	laserleft.image = Textures.load("http://i.imgur.com/7MiVxvM.png");
 	laserleft.name = "laserleft";
-
+	
+	var attractor = new Sprite();
+	attractor.width = 32;
+	attractor.height = 32;
+	attractor.x = canwidth - 32;
+	attractor.y = 32 * 11;
+	attractor.image = Textures.load("http://i.imgur.com/fErgkl2.png");
+	attractor.name = "attractor";
+	
 	elements.push(start);
 	elements.push(end);
 	elements.push(enemy);
@@ -148,6 +156,7 @@ function LoadContent() {
 	elements.push(laserdown);
 	elements.push(laserleft);
 	elements.push(unbreakble);
+	elements.push(attractor);
 
 	world.addChild(background);
 	world.addChild(start);
@@ -162,6 +171,7 @@ function LoadContent() {
 	world.addChild(laserdown);
 	world.addChild(laserleft);
 	world.addChild(selection);
+	world.addChild(attractor);
 }
 
 LoadContent();
